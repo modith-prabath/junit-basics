@@ -1,0 +1,11 @@
+If we see in this branch for test file , we created only one instance f Math utils and used it for all methods in that test class, which is bad practice 
+This may changes the behaviour state of test and may pollue them.
+So, best practise to follow in this case is to create instance for each test method 
+But creating instance for all methods is such  tedious task.
+SO junit provdided lifecycle hooks to make our life easier 
+Some of them are @BeforeALL @BeforeEach @AfterEach @AfterALL.
+@BeforeALL - Executes even before class instance is created.
+@BeforeEach - Executes before running of each test method 
+@AfterEach - Executes after each test method 
+@AfterALL - Executes after all methods completed run 
+so, in next branch(lifecycle-hooks) I refactored some code to make it look elegant
