@@ -1,0 +1,6 @@
+There is an anntation provdided by juit called test instance 
+This states the behaviour of when a class instance is created.
+By default even without annotation it works as LifeCycle.PER_METHOD (Enum)
+So, there two types PER_METHOD AND PER_CLASS 
+PER_METHOD create new class instance for each method run 
+PER_CLASS creates only one instance of class for all methods . Usually this is a bad practice , s use it only if required 
