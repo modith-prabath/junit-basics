@@ -7,7 +7,10 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.TestInstance.Lifecycle;
 
+@TestInstance(Lifecycle.PER_CLASS)
 class MathUtilsTest {
 	
 	MathUtils m; 
@@ -16,7 +19,7 @@ class MathUtilsTest {
 	//Reasn to add static keyword here is because 
 	//this will be executed even before class instance is being created
 	//so we need to make it static, withut it it fails
-	static void beforeAll() {
+	void beforeAll() {
 		System.out.println("Executes before all");
 	}
 	
@@ -34,7 +37,7 @@ class MathUtilsTest {
 	
 	@AfterAll
 	//Similar to before all
-	static void afterAll() {
+	void afterAll() {
 		System.out.println("AfterAll are executed");
 	}
 	
